@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Funciones del SO | UD1_Sistemas operativos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="María del Mar Senra Martul" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegación</a></p>
+<header id="header" ><div id="headerContent">UD1_Sistemas operativos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Sistemas operativos</a></li>
+   <li><a href="componentes.html" class="no-ch">Componentes</a></li>
+   <li><a href="arquitectura_dos_so.html" class="no-ch">Arquitectura de los SO</a></li>
+   <li><a href="clasificacin_dos_so.html" class="no-ch">Clasificación de los SO</a></li>
+   <li><a href="mercado_actual.html" class="no-ch">Mercado actual</a></li>
+   <li id="active"><a href="funcins_do_so.html" class="active no-ch">Funciones del SO</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="mercado_actual.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Funciones del SO</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_85" class="block iDevice_content">
+<h4>Gestión de procesos</h4>
+<p><strong>Un proceso se crea cada vez que se ejecuta un programa</strong>, al cargar las instrucciones del mismo en memoria principal. Cada proceso necesita recursos, y <strong>el SO es el encargado de decidir qué proceso se ejecuta en cada momento</strong>, <strong>y cuál debe esperar. Por eso los procesos tienen varios estados</strong>:</p>
+<ul>
+<li><strong>Listo o Ready</strong> (o en espera o listo): Es el proceso para el cual no se están ejecutando órdenes, pero que está disponible para que el sistema pueda asignar y ejecutar un procesador.</li>
+<li><strong>En ejecución</strong>: Es el proceso que tiene asignado un procesador y desde el que se están ejecutando instrucciones. Puede cambiar por:</li>
+<li><strong>Bloqueado</strong>: El proceso está a la espera de un recurso ocupado y no disponible y no podrá abandonar este estado hasta que el recurso esté libre, en ese caso irá al estado Ready.</li>
+<li><strong>Creado</strong>: Se ha ordenado la ejecución del proceso y se está creando la estructura de datos necesaria y la memoria asignada. Cuando se realizan todos estos preliminares, pasa al estado Ready.</li>
+<li><strong>Zombie</strong>: En UNIX/Linux, se trata de un proceso finalizado que no se pudo eliminar por algún motivo y todavía está en la cola de procesos.</li>
+<li><strong>Suspendido</strong>: Es un proceso detenido a petición del usuario que durante el tiempo que permanece en este estado no lo selecciona el algoritmo de programación para pasar a la ejecución. Cuando se reactiva, va a Ready.</li>
+</ul>
+<h4>Gestión de la memoria</h4>
+<p>El SO utiliza distintas <strong>técnicas para optimizar el uso de la memoria interna</strong>, y así dar la sensación al usuario de que se ejecutan varios procesos a la vez, lo cual solo es posible si disponemos de varios procesadores, y optimizar el tiempo de respuesta de los mismos en función de su prioridad.</p>
+<p>Por otro lado, el SO <strong>gestiona la memoria secundaria</strong> facilitando técnicas de particionado que permiten crear espacios de memoria independientes, con dos objetivos fundamentales: pueden ser gestionados aisladamente (copias de seguridad, alojar distintos SO, tener distintos sistemas de archivos, etc.) y permiten optimizar el uso de la memoria secundaria.</p>
+<h4>Gestión de entrada / salida</h4>
+<p>El SO es el encargado de <strong>gestionar la interacción con los periféricos sirviendo de intermediario e intérprete,</strong> tanto para que el sistema pueda usar la información introducida a través de ellos, como para dar el formato necesario y poder mostrar a través de los periféricos de salida, la información que el sistema quiere transmitir al exterior.</p>
+<p>Para llevar a cabo esta función <strong>el SO emplea los drivers o controladores</strong>.</p>
+<h4>Gestión de archivos</h4>
+<p>Los usuarios quieren poder almacenar la información y luego poder recuperarla. Existen <strong>distintos tipos de dispositivos de almacenamiento pero todos ellos necesitan un sistema que les permita alojar y recuperar la información</strong>. El <strong>SO emplea los sistemas de archivos</strong> para alcanzar este objetivo. Sus <strong>funciones</strong> principales son:</p>
+<ul>
+<li><strong>Estructurar la información</strong> en archivos y directorios (contenedores de archivos).</li>
+<li><strong>Asignar espacio</strong> en el dispositivo a los archivos.</li>
+<li><strong>Permitir el acceso</strong> a estos archivos.</li>
+<li><strong>Gestionar el espacio libre</strong> disponible.</li>
+</ul>
+<h4>Gestión de la seguridad</h4>
+<p>La gestión de la seguridad implica principalmente dos aspectos diferentes:</p>
+<ul>
+<li><strong>El mecanismo de control de acceso</strong>, que define la forma en la que se permite o deniega a los procesos y usuarios el acceso a los diferentes recursos del sistema.</li>
+<li><strong>Control de errores</strong> que afectan el funcionamiento del sistema.</li>
+</ul>
+<h4>Interfaz de usuario</h4>
+<p><strong>La interfaz es el elemento del sistema operativo a través del cual el usuario interactúa con el propio sistema</strong>. A grandes rasgos, esta interfaz debería permitir al usuario:</p>
+<ul>
+<li><strong>Identificarse</strong>.</li>
+<li><strong>Ejecutar programas y recibir sus resultados</strong>.</li>
+<li><strong>Gestionar su propio sistema</strong>.</li>
+</ul>
+<p></p>
+<p><span style="background-color: #ffff99;"><em>Analizaremos en profundidad cada una de ellas en las próximas UD del módulo.</em></span></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Licenciado bajo la</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="mercado_actual.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>
